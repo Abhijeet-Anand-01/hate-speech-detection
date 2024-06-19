@@ -1,0 +1,31 @@
+<p-avatar icon="pi pi-user" styleClass="mr-2" size="large" [style]="{'background-color':'#2196F3', 'color': '#ffffff'}" shape="circle" (click)="menu.toggle($event)"></p-avatar>
+<p-menu #menu [model]="items" [popup]="true"></p-menu>
+<div class="main-container"></div>
+<div class="content">
+    <div class="partition-1">
+        <div class="heading">
+            <h1>Hate Speech Detection</h1>
+            <p>Darkness cannot drive darkness, Light can do that. Hate cannot drive out hate, Love can do that...
+            </p>
+        </div>
+
+        <span class="p-float-label">
+            <input pInputText id="username" [(ngModel)]="username" />
+            <label htmlFor="username">Username</label>
+        </span>
+
+        <textarea rows="5" cols="30" pInputTextarea [(ngModel)]="speech" [autoResize]="true"
+            placeholder="Please type the speech here" (input)="resetSpeech()"></textarea>
+
+        <button pButton pRipple label="Submit" (click)="testHate()"></button>
+
+
+        <p-messages [closable]="false"></p-messages>
+
+
+    </div>
+    <div class="partition-2">
+        <!-- <p-chart type="pie" [data]="data" [options]="options"></p-chart> -->
+        <p-chart type="bar" [data]="basicData" [options]="basicOptions"></p-chart>
+    </div>
+</div>

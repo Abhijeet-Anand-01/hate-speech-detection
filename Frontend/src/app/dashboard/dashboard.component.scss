@@ -1,0 +1,57 @@
+.main-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url('../../assets/bgImg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    filter: blur(14px);
+}
+.content {
+    // margin: 20px 120px 80px;
+    // width: calc(100vw - 240px);
+
+    padding: 30px 280px;
+    // display: flex;
+    color: #fff;
+    height: 100vh;
+    overflow-y: scroll;
+
+    ::ng-deep {
+        p-dropdown .p-dropdown {
+            width: 220px;
+        }
+    }
+
+    h2 {
+        margin-bottom: 15px;
+    }
+
+    .flex-box {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        gap: 50px;
+    }
+
+    .half {
+        width: 50%;
+        // padding: 50px;
+    }
+
+    .full {
+        width: 100%;
+        padding: 80px 0px;
+
+        ::ng-deep {
+            .stacked div {
+                height: 500px;
+            }
+        }
+    }
+}

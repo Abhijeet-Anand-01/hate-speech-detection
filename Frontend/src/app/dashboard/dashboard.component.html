@@ -1,0 +1,30 @@
+<div class="main-container"></div>
+<div class="content">
+    <h1>Dashboard</h1>
+    <div class="flex align-items-center gap-5 my-5">
+        <h3>Select user: </h3>
+        <p-dropdown [options]="allDataByUsers?.users" optionLabel="username" optionValue="username"
+            [(ngModel)]="selectedUsername" (onChange)="getUsername()"></p-dropdown>
+    </div>
+    <div class="flex-box">
+        <div class="half pie-chart">
+            <h2>Input text hate vs non hate speech analysis</h2>
+            <p-chart type="pie" [data]="pieChartData" [options]="pieChartOptions"></p-chart>
+        </div>
+
+        <div class="half">
+            <h2>Input text hate type analysis</h2>
+            <p-chart type="polarArea" [data]="polarAreaData" [options]="polarAreaOptions"></p-chart>
+        </div>
+    </div>
+
+    <div class="full">
+        <h2>Monthly hate vs non hate speech analysis</h2>
+        <p-chart type="line" [data]="lineChartData" [options]="lineChartOptions"></p-chart>
+    </div>
+
+    <div class="full">
+        <h2>Monthly hate types analysis</h2>
+        <p-chart class="stacked" type="bar" [data]="data" [options]="options"></p-chart>
+    </div>
+</div>
